@@ -14,4 +14,3 @@ supermarket.add_product("dairy", "Leche Colanta", 12)
 supermarket.add_product("dairy", "Leche Alpina", 14)
 supermarket.add_product("dairy", "Mantequilla la fina", 25)
 
-# c - n / a
