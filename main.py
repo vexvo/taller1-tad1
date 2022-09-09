@@ -17,4 +17,6 @@ supermarket.add_product("dairy", "Mantequilla la fina", 25)
 # c - create product in each category via console
 supermarket.add_product_console()
 
-# d - 
+# d - check if product exists, if it does add, if it doesnt, create
+supermarket.existing_product()
+

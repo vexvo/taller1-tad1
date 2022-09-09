@@ -35,4 +35,39 @@ class Supermarket:
             except:
                 print("Expected a numerical value")
 
-    
+    # d
+    def existing_product(self):
+        while True:
+            amt_products_validate = int(input("How many products are you going to validate"))
+            try:
+                for i in range(amt_products_validate):
+                    product_searched = input("Product which's existence will be validated")
+                    found = False
+                    size = self.dairy.size() + self.cleaning.size() + self.grains.size()
+                    amt_added = 0
+                    while found == False and i < size:
+                        if self.dairy[i] == product_searched:
+                            amt_added = int(input("How much of the product will you add"))
+                            aux = list(self.dairy[i])
+                            aux[i+1] = aux[i] + amt_added 
+                            found = True
+                        elif i > self.dairy.size():
+                            if self.cleaning[i] == product_searched:
+                                amt_added = int(input("How much of the product will you add"))
+                                aux = list(self.cleaning[i])
+                                aux[i+1] = aux[i] + amt_added 
+                                found = True
+                            elif i > (self.dairy.size() + self.cleaning.size()):
+                                if self.grains[i] == product_searched:
+                                    amt_added = int(input("How much of the product will you add"))
+                                    aux = list(self.grains[i])
+                                    aux[i+1] = aux[i] + amt_added 
+                                    found = True
+                                else:
+                                    print("Product doesn't exist, creating it")
+                                    self.add_product_console()
+                                    break
+
+                break
+            except:
+                print("Expected a numerical value")
