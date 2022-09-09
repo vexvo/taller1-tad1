@@ -1,3 +1,4 @@
+from typing_extensions import Self
 from xml.etree.ElementTree import TreeBuilder
 
 
@@ -71,3 +72,7 @@ class Supermarket:
                 break
             except:
                 print("Expected a numerical value")
+
+    # e
+    def print_products(self):
+        print(f'------------ PRODUCTS ------------\n {self.dairy}\n {self.cleaning}\n {self.grains}')
